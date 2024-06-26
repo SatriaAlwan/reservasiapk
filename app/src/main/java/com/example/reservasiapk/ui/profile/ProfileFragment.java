@@ -1,4 +1,4 @@
-package com.example.reservasiapk.ui.notifications;
+package com.example.reservasiapk.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,8 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.reservasiapk.databinding.FragmentNotificationsBinding;
+import com.example.reservasiapk.ui.notifications.NotificationsViewModel;
 
-public class NotificationsFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     private FragmentNotificationsBinding binding;
 

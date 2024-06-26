@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Reservasiapk"
         tools:targetApi="31">
         <activity
+            android:name=".BookingDetail"
+            android:exported="false" />
+        <activity
+            android:name=".MenuResto"
+            android:exported="false" />
+        <activity
+            android:name=".TiketPesanan"
+            android:exported="false" />
+        <activity
+            android:name=".Restoran_item"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
