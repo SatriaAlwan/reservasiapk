@@ -27,5 +27,12 @@
         android:text="Restaurant Name"
         android:textSize="16sp"
         android:layout_marginTop="8dp" />
+    <TextView
+        android:id="@+id/Comingsoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coming Soon"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>
