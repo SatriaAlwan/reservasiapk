@@ -24,7 +24,8 @@ public class MenuResto extends AppCompatActivity implements MenuRestoAdapter.OnM
         menuList = new ArrayList<>();
         // Add sample menu items
         menuList.add(new DataPembelian(R.drawable.cornsoup, 20000, "Corn Soup"));
-        menuList.add(new DataPembelian(R.drawable.estehmanis, 25000, "Tomato Soup"));
+        menuList.add(new DataPembelian(R.drawable.estehmanis, 250000, "tehmanis"));
+        menuList.add(new DataPembelian(R.drawable.estehmanis, 35000, "Steak"));
 
         MenuRestoAdapter adapter = new MenuRestoAdapter(this, menuList, this);
         recyclerViewMenu.setLayoutManager(new LinearLayoutManager(this));

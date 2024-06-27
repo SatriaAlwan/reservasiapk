@@ -53,10 +53,7 @@
                 android:id="@+id/tanggalBooking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="01 Juni 2024"
-                android:focusable="false"
-                android:clickable="true"
-                android:background="@android:color/transparent" />
+                android:hint="Tanggal Booking" />
         </LinearLayout>
 
         <!-- Waktu Booking -->
@@ -77,10 +74,9 @@
                 android:id="@+id/waktuBooking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="13:00"
-                android:focusable="false"
-                android:clickable="true"
-                android:background="@android:color/transparent" />
+                android:hint="Waktu Booking"
+                android:layout_below="@id/tanggalBooking"
+                android:layout_marginTop="16dp" />
         </LinearLayout>
 
         <!-- Jumlah Orang -->
@@ -101,8 +97,10 @@
                 android:id="@+id/jumlahOrang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="5"
-                android:background="@android:color/transparent" />
+                android:hint="Jumlah Orang"
+                android:layout_below="@id/waktuBooking"
+                android:layout_marginTop="16dp"
+                android:inputType="number" />
         </LinearLayout>
 
         <!-- Menu di Meja -->
