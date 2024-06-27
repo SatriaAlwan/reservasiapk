@@ -9,13 +9,31 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- buat tombol Back sama teks menu-->
+        <!-- Tombol Kembali dan teks menu -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:orientation="horizontal">
 
+            <!-- Tombol Kembali -->
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menu Makanan"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginStart="16dp"/>
         </LinearLayout>
+
         <!-- Tanggal Booking -->
         <LinearLayout
             android:layout_width="match_parent"
