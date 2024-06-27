@@ -52,7 +52,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             textView = itemView.findViewById(R.id.textView);
-            button = itemView.findViewById(R.id.button);
+            button = itemView.findViewById(R.id.buttonpindah);
         }
     }
 }
