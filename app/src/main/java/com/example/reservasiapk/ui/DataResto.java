@@ -4,12 +4,15 @@ public class DataResto {
     int image_resto, image_menu;
     String nama_resto, alamat_resto, harga;
 
-    public DataResto(int image_resto, int image_menu, String nama_resto, String alamat_resto, String Harga){
+    public DataResto(int image_resto, String nama_resto, int image_menu, String Harga, String alamat_resto){
         this.alamat_resto = alamat_resto;
         this.harga = harga;
+        this.image_menu = image_menu;
+    }
+
+    public DataResto(int image_resto, String nama_resto) {
         this.image_resto = image_resto;
         this.nama_resto = nama_resto;
-        this.image_menu = image_menu;
     }
 
     public int getImage_resto() {
