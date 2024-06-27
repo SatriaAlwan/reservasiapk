@@ -38,8 +38,8 @@ public class HomeFragment extends Fragment {
         // Add sample data
         restaurantList = new ArrayList<>();
         restaurantList.add(new DataResto(R.drawable.meatguy,"meatguy"));
-        restaurantList.add(new DataResto(R.drawable.sushitei, "Sushi Tei"));
-        restaurantList.add(new DataResto(R.drawable.omakase, "Omni Lounge"));
+        restaurantList.add(new DataResto(R.drawable.sushitei, "SushiTei"));
+        restaurantList.add(new DataResto(R.drawable.omakase, "OmniLounge"));
         restaurantList.add(new DataResto(R.drawable.mastros, "mastroy"));
 
         // Set Adapter

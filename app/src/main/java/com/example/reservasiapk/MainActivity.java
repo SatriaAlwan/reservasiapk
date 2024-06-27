@@ -10,16 +10,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-
 import com.example.reservasiapk.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    Button button = findViewById(R.id.button);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +32,5 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuResto.class);
-                startActivity(intent);
-            }
-        });
     }
 }
