@@ -1,24 +1,40 @@
 package com.example.reservasiapk;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MenuResto extends AppCompatActivity {
+public class MenuResto extends AppCompatActivity implements MenuRestoadapter.OnMenuClickListener {
+
+    private RecyclerView recyclerViewMenu;
+    private TextView totalHargaTextView;
+    private List<DataPembelian> menuList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.menu_resto);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        recyclerViewMenu = findViewById(R.id.recyclerViewMenu);
+        totalHargaTextView = findViewById(R.id.totalHargaTextView);
+
+        menuList = new ArrayList<>();
+        // Add sample menu items
+        menuList.add(new DataPembelian(R.drawable.cornsoup, 20000, "Corn Soup"));
+        menuList.add(new DataPembelian(R.drawable.steak, 25000, "steak"));
+        menuList.add(new DataPembelian(R.drawable.estehmanis, 25000, "estehmasnis"));
+
+        MenuRestoadapter adapter = new MenuRestoadapter(this, menuList, this);
+        recyclerViewMenu.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewMenu.setAdapter(adapter);
+    }
+
+    @Override
+    public void onTotalPriceChanged(int totalPrice) {
+        totalHargaTextView.setText("Rp " + totalPrice);
     }
 }

@@ -65,7 +65,7 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/decreaseButton"
+                    android:id="@+id/kurangButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:text="-"
@@ -73,7 +73,7 @@
                     android:layout_marginRight="4dp" />
 
                 <TextView
-                    android:id="@+id/quantityText"
+                    android:id="@+id/quantity"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -81,12 +81,14 @@
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/increaseButton"
+                    android:id="@+id/tambahButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginLeft="4dp"
                     android:text="+"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="4dp" />
+                    android:textColor="@color/black"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
