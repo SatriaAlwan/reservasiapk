@@ -1,5 +1,4 @@
 package com.example.reservasiapk;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class MenuRestoadapter extends RecyclerView.Adapter<MenuRestoadapter.MenuViewHolder> {
+public class MenuRestoAdapter extends RecyclerView.Adapter<MenuRestoAdapter.MenuViewHolder> {
 
     private List<DataPembelian> menuList;
     private Context context;
@@ -22,7 +21,7 @@ public class MenuRestoadapter extends RecyclerView.Adapter<MenuRestoadapter.Menu
         void onTotalPriceChanged(int totalPrice);
     }
 
-    public MenuRestoadapter(Context context, List<DataPembelian> menuList, OnMenuClickListener listener) {
+    public MenuRestoAdapter(Context context, List<DataPembelian> menuList, OnMenuClickListener listener) {
         this.context = context;
         this.menuList = menuList;
         this.listener = listener;
@@ -31,7 +30,7 @@ public class MenuRestoadapter extends RecyclerView.Adapter<MenuRestoadapter.Menu
     @NonNull
     @Override
     public MenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.menu_resto, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_menu, parent, false);
         return new MenuViewHolder(view);
     }
 
